@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration status="info">
+    <properties>
+        <property name="pattern">%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %class{36} %M - %msg%xEx%n</property>
+        <property name="fileSize">10M</property>
+        <property name="maxFileCount">50</property>
+        <property name="outputLogLevel">info</property>
+        <property name="logPath">logPath</property>
+    </properties>
+
+    <appenders>
+        <RollingFile name="all" fileName="${logPath}/all.log"
+                     filePattern="logs/$${date:yyyy-MM}/all-%d{MM-dd-yyyy}-%i.log.zip">
+            <PatternLayout pattern="${pattern}"/>
+            <SizeBasedTriggeringPolicy size="50M"/>
+            <DefaultRolloverStrategy max="50"/>
+        </RollingFile>
+
+    </appenders>
+
+    <loggers>
+        <Logger name="all" level="info" additivity="true">
+            <AppenderRef ref="all"/>
+        </Logger>
+        <Root level="${outputLogLevel}">
+            <AppenderRef ref="all"/>
+        </Root>
+    </loggers>
+</configuration>

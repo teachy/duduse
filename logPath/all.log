@@ -1,0 +1,318 @@
+2019-11-25 15:51:05 INFO  [main] org.springframework.boot.StartupInfoLogger logStarting - Starting DuduseApplication on DZ96NWW0AZJN874 with PID 5324 (E:\projects\duduse\target\classes started by Administrator in E:\projects\duduse)
+2019-11-25 15:51:05 INFO  [main] org.springframework.boot.SpringApplication logStartupProfileInfo - The following profiles are active: dev
+2019-11-25 15:51:06 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$80244be5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 15:51:06 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8080 (http)
+2019-11-25 15:51:06 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Initializing ProtocolHandler ["http-nio-8080"]
+2019-11-25 15:51:06 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting service [Tomcat]
+2019-11-25 15:51:06 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-11-25 15:51:06 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Initializing Spring embedded WebApplicationContext
+2019-11-25 15:51:06 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 959 ms
+2019-11-25 15:51:06 INFO  [main] com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2019-11-25 15:51:06 INFO  [main] com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2019-11-25 15:51:06 INFO  [main] org.jooq.tools.JooqLogger info - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.11.12
+                                      
+2019-11-25 15:51:06 INFO  [main] com.tu.duduse.common.utils.PackageScannerManager getFullyQualifiedClassNameList - start scanning classes from com.tu.duduse.spider.all
+2019-11-25 15:51:07 INFO  [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping initHandlerMethods - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-25 15:51:07 INFO  [main] org.springframework.scheduling.concurrent.ExecutorConfigurationSupport initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 15:51:07 INFO  [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping <init> - Adding welcome page: class path resource [static/index.html]
+2019-11-25 15:51:07 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start - Context refreshed
+2019-11-25 15:51:07 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start - Found 1 custom documentation plugin(s)
+2019-11-25 15:51:07 INFO  [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan - Scanning for api listing references
+2019-11-25 15:51:07 INFO  [main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith - Generating unique operation named: insertToolsUsingPOST_1
+2019-11-25 15:51:07 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting ProtocolHandler ["http-nio-8080"]
+2019-11-25 15:51:07 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer start - Tomcat started on port(s): 8080 (http) with context path '/duduse'
+2019-11-25 15:51:07 INFO  [main] org.springframework.boot.StartupInfoLogger logStarted - Started DuduseApplication in 2.429 seconds (JVM running for 3.124)
+2019-11-25 15:51:08 INFO  [http-nio-8080-exec-1] org.apache.juli.logging.DirectJDKLog log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 15:51:08 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2019-11-25 15:51:08 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet initServletBean - Completed initialization in 4 ms
+2019-11-25 15:51:09 WARN  [spider-pool-10] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: uuid_tt_dd=10_19873177550-1574668267935-725584; Expires=Thu, 01 Jan 2025 00:00:00 GMT; Path=/; Domain=.csdn.net;". Invalid 'expires' attribute: Thu, 01 Jan 2025 00:00:00 GMT
+2019-11-25 15:51:09 WARN  [spider-pool-10] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: dc_session_id=10_1574668267935.452159; Expires=Thu, 01 Jan 2025 00:00:00 GMT; Path=/; Domain=.csdn.net;". Invalid 'expires' attribute: Thu, 01 Jan 2025 00:00:00 GMT
+2019-11-25 15:51:09 WARN  [spider-pool-1] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: ch=JY_123; Max-Age=31536000; Expires=Tue, 24 Nov 2020 07:51:08 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Tue, 24 Nov 2020 07:51:08 GMT
+2019-11-25 15:51:09 WARN  [spider-pool-1] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: uas=brt_flag:1&system:&model_name:&browser_type:1&brand_name:&model_id:0&brand_id:0; Max-Age=31536000; Expires=Tue, 24 Nov 2020 07:51:08 GMT; Path=/; Domain=www.9game.cn; HTTPOnly". Invalid 'expires' attribute: Tue, 24 Nov 2020 07:51:08 GMT
+2019-11-25 15:51:09 WARN  [spider-pool-1] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: csrftoken=4248b6b580e0f8fcd2f52f3cb8ac65cc%7C1574668267803%7C0; Max-Age=3600; Expires=Mon, 25 Nov 2019 08:51:08 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Mon, 25 Nov 2019 08:51:08 GMT
+2019-11-25 15:51:09 WARN  [spider-pool-1] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: newuser_time=1574668267803; Max-Age=31536000; Expires=Tue, 24 Nov 2020 07:51:08 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Tue, 24 Nov 2020 07:51:08 GMT
+2019-11-25 15:51:09 WARN  [spider-pool-1] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: tid=7fed7580d0e30bb6e369690adc79742f; Max-Age=315360000; Expires=Thu, 22 Nov 2029 07:51:08 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Thu, 22 Nov 2029 07:51:08 GMT
+2019-11-25 15:51:09 WARN  [spider-pool-1] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: sid=acd9f916-7d37-4553-90f0-03a9b0e66858; Max-Age=31536000; Expires=Tue, 24 Nov 2020 07:51:08 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Tue, 24 Nov 2020 07:51:08 GMT
+2019-11-25 15:51:10 ERROR [spider-pool-13] com.tu.duduse.spider.all.BaseSpider getWebsDto - 下载错误--webName：爱美剧
+2019-11-25 15:51:57 WARN  [spider-pool-20] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: uuid_tt_dd=10_19873177550-1574668316058-385287; Expires=Thu, 01 Jan 2025 00:00:00 GMT; Path=/; Domain=.csdn.net;". Invalid 'expires' attribute: Thu, 01 Jan 2025 00:00:00 GMT
+2019-11-25 15:51:57 WARN  [spider-pool-20] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: dc_session_id=10_1574668316058.685518; Expires=Thu, 01 Jan 2025 00:00:00 GMT; Path=/; Domain=.csdn.net;". Invalid 'expires' attribute: Thu, 01 Jan 2025 00:00:00 GMT
+2019-11-25 15:51:57 WARN  [spider-pool-5] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: ch=JY_123; Max-Age=31536000; Expires=Tue, 24 Nov 2020 07:51:56 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Tue, 24 Nov 2020 07:51:56 GMT
+2019-11-25 15:51:57 WARN  [spider-pool-5] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: uas=brt_flag:1&system:&model_name:&browser_type:1&brand_name:&model_id:0&brand_id:0; Max-Age=31536000; Expires=Tue, 24 Nov 2020 07:51:56 GMT; Path=/; Domain=www.9game.cn; HTTPOnly". Invalid 'expires' attribute: Tue, 24 Nov 2020 07:51:56 GMT
+2019-11-25 15:51:57 WARN  [spider-pool-5] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: csrftoken=ea75c00380b3c6bb6580d3042c3f59ca%7C1574668315952%7C0; Max-Age=3600; Expires=Mon, 25 Nov 2019 08:51:56 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Mon, 25 Nov 2019 08:51:56 GMT
+2019-11-25 15:51:57 WARN  [spider-pool-5] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: newuser_time=1574668315952; Max-Age=31536000; Expires=Tue, 24 Nov 2020 07:51:56 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Tue, 24 Nov 2020 07:51:56 GMT
+2019-11-25 15:51:57 WARN  [spider-pool-5] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: tid=52e6d16d38c8974cbe3c9af2bd6d56cb; Max-Age=315360000; Expires=Thu, 22 Nov 2029 07:51:56 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Thu, 22 Nov 2029 07:51:56 GMT
+2019-11-25 15:51:57 WARN  [spider-pool-5] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: sid=924c1546-08b8-421b-867e-ff7d53c09e75; Max-Age=31536000; Expires=Tue, 24 Nov 2020 07:51:56 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Tue, 24 Nov 2020 07:51:56 GMT
+2019-11-25 15:51:58 ERROR [spider-pool-10] com.tu.duduse.spider.all.BaseSpider getWebsDto - 下载错误--webName：爱美剧
+2019-11-25 17:45:32 INFO  [http-nio-8080-exec-1] com.tu.duduse.controller.TestSpiderController addTestUrl - 新增测试网站:SpiderUrlBo(id=0, name=盘搜, url=http://pansou.com/?q={0}, xpath=//div[@class='g'], type=软件, charset=utf-8, status=1)
+2019-11-25 17:47:57 INFO  [http-nio-8080-exec-3] com.tu.duduse.controller.TestSpiderController addTestUrl - 新增测试网站:SpiderUrlBo(id=0, name=盘搜, url=http://106.15.195.249:8011/search_new?callback=jQuery17208399484786776727_1574675195180&q={0}&p=1&_=1574675195383, xpath=//div[@class='g'], type=软件, charset=utf-8, status=1)
+2019-11-25 17:52:15 INFO  [http-nio-8080-exec-10] com.tu.duduse.controller.TestSpiderController addTestUrl - 新增测试网站:SpiderUrlBo(id=0, name=盘搜, url=http://pansou.com/?q={0}, xpath=//div[@id='result'], type=软件, charset=utf-8, status=1)
+2019-11-25 17:52:31 INFO  [http-nio-8080-exec-4] com.tu.duduse.controller.SpiderUrlController insertUrl - 新增网站:SpiderUrlBo(id=0, name=盘搜, url=http://pansou.com/?q={0}, xpath=//div[@id='result'], type=软件, charset=utf-8, status=1)
+2019-11-25 17:52:43 WARN  [spider-pool-17] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: uuid_tt_dd=10_19873177550-1574675561951-872307; Expires=Thu, 01 Jan 2025 00:00:00 GMT; Path=/; Domain=.csdn.net;". Invalid 'expires' attribute: Thu, 01 Jan 2025 00:00:00 GMT
+2019-11-25 17:52:43 WARN  [spider-pool-17] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: dc_session_id=10_1574675561951.586440; Expires=Thu, 01 Jan 2025 00:00:00 GMT; Path=/; Domain=.csdn.net;". Invalid 'expires' attribute: Thu, 01 Jan 2025 00:00:00 GMT
+2019-11-25 17:52:43 WARN  [spider-pool-16] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: ch=JY_123; Max-Age=31536000; Expires=Tue, 24 Nov 2020 09:52:42 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Tue, 24 Nov 2020 09:52:42 GMT
+2019-11-25 17:52:43 WARN  [spider-pool-16] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: uas=brt_flag:1&system:&model_name:&browser_type:1&brand_name:&model_id:0&brand_id:0; Max-Age=31536000; Expires=Tue, 24 Nov 2020 09:52:42 GMT; Path=/; Domain=www.9game.cn; HTTPOnly". Invalid 'expires' attribute: Tue, 24 Nov 2020 09:52:42 GMT
+2019-11-25 17:52:43 WARN  [spider-pool-16] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: csrftoken=bcc264c510d5b88a11f957790a5fa11c%7C1574675561844%7C0; Max-Age=3600; Expires=Mon, 25 Nov 2019 10:52:42 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Mon, 25 Nov 2019 10:52:42 GMT
+2019-11-25 17:52:43 WARN  [spider-pool-16] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: newuser_time=1574675561844; Max-Age=31536000; Expires=Tue, 24 Nov 2020 09:52:42 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Tue, 24 Nov 2020 09:52:42 GMT
+2019-11-25 17:52:43 WARN  [spider-pool-16] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: tid=90580de19dc487d88a44b0aea1813c97; Max-Age=315360000; Expires=Thu, 22 Nov 2029 09:52:42 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Thu, 22 Nov 2029 09:52:42 GMT
+2019-11-25 17:52:43 WARN  [spider-pool-16] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: sid=ce21f01f-6886-46a9-b064-17237c1ed3c1; Max-Age=31536000; Expires=Tue, 24 Nov 2020 09:52:42 GMT; Path=/; Domain=.9game.cn; HTTPOnly". Invalid 'expires' attribute: Tue, 24 Nov 2020 09:52:42 GMT
+2019-11-25 17:52:45 WARN  [spider-pool-26] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: has_recent_activity=1; path=/; expires=Mon, 25 Nov 2019 10:52:43 -0000". Invalid 'expires' attribute: Mon, 25 Nov 2019 10:52:43 -0000
+2019-11-25 17:52:45 WARN  [spider-pool-26] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: _octo=GH1.1.1810184095.1574675563; domain=.github.com; path=/; expires=Thu, 25 Nov 2021 09:52:43 -0000". Invalid 'expires' attribute: Thu, 25 Nov 2021 09:52:43 -0000
+2019-11-25 17:52:45 WARN  [spider-pool-26] org.apache.http.client.protocol.ResponseProcessCookies processCookies - Invalid cookie header: "Set-Cookie: logged_in=no; domain=.github.com; path=/; expires=Fri, 25 Nov 2039 09:52:43 -0000; secure; HttpOnly". Invalid 'expires' attribute: Fri, 25 Nov 2039 09:52:43 -0000
+2019-11-25 17:52:46 ERROR [spider-pool-24] com.tu.duduse.spider.all.BaseSpider getWebsDto - 下载错误--webName：962乐游网
+2019-11-25 17:52:46 ERROR [spider-pool-7] com.tu.duduse.spider.all.BaseSpider getWebsDto - 下载错误--webName：爱美剧
+2019-11-25 17:58:19 INFO  [http-nio-8080-exec-6] com.tu.duduse.controller.TestSpiderController addTestUrl - 新增测试网站:SpiderUrlBo(id=0, name=搜百度盘, url=https://www.sobaidupan.com/search.asp?wd={0}&so_md5key=d41d8cd98f00b204e9800998ecf8427e, xpath=//div[@class='row'], type=搜百度盘, charset=utf-8, status=1)
+2019-11-25 17:59:27 INFO  [http-nio-8080-exec-9] com.tu.duduse.controller.SpiderUrlController insertUrl - 新增网站:SpiderUrlBo(id=0, name=搜百度盘, url=https://www.sobaidupan.com/search.asp?wd={0}&so_md5key=d41d8cd98f00b204e9800998ecf8427e, xpath=//div[@class='row'], type=搜百度盘, charset=utf-8, status=1)
+2019-11-25 18:01:23 INFO  [http-nio-8080-exec-1] com.tu.duduse.controller.TestSpiderController addTestUrl - 新增测试网站:SpiderUrlBo(id=0, name=凌风云搜索, url=https://www.lingfengyun.com/search?wd={0}&so_token=c254e9fc3b8896905300bc2453f07cfd&so_source=1, xpath=//div[@class='tab'], type=soft, charset=utf-8, status=1)
+2019-11-25 18:01:29 ERROR [spider-pool-20] com.tu.duduse.spider.all.BaseSpider getWebsDto - 下载错误--webName：凌风云搜索
+2019-11-25 18:03:06 INFO  [http-nio-8080-exec-5] com.tu.duduse.controller.SpiderUrlController insertUrl - 新增网站:SpiderUrlBo(id=0, name=凌风云搜索, url=https://www.lingfengyun.com/search?wd={0}&so_token=c254e9fc3b8896905300bc2453f07cfd&so_source=1, xpath=//div[@class='tab'], type=soft, charset=utf-8, status=1)
+2019-11-25 18:04:14 INFO  [main] org.springframework.boot.StartupInfoLogger logStarting - Starting DuduseApplication on DZ96NWW0AZJN874 with PID 24916 (E:\projects\duduse\target\classes started by Administrator in E:\projects\duduse)
+2019-11-25 18:04:14 INFO  [main] org.springframework.boot.SpringApplication logStartupProfileInfo - The following profiles are active: dev
+2019-11-25 18:04:15 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9da5e5c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-25 18:04:15 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8080 (http)
+2019-11-25 18:04:15 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Initializing ProtocolHandler ["http-nio-8080"]
+2019-11-25 18:04:15 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting service [Tomcat]
+2019-11-25 18:04:15 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-11-25 18:04:16 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Initializing Spring embedded WebApplicationContext
+2019-11-25 18:04:16 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 987 ms
+2019-11-25 18:04:16 INFO  [main] com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2019-11-25 18:04:16 INFO  [main] com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2019-11-25 18:04:16 INFO  [main] org.jooq.tools.JooqLogger info - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.11.12
+                                      
+2019-11-25 18:04:16 INFO  [main] com.tu.duduse.common.utils.PackageScannerManager getFullyQualifiedClassNameList - start scanning classes from com.tu.duduse.spider.all
+2019-11-25 18:04:16 INFO  [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping initHandlerMethods - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-25 18:04:16 INFO  [main] org.springframework.scheduling.concurrent.ExecutorConfigurationSupport initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-25 18:04:16 INFO  [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping <init> - Adding welcome page: class path resource [static/index.html]
+2019-11-25 18:04:17 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start - Context refreshed
+2019-11-25 18:04:17 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start - Found 1 custom documentation plugin(s)
+2019-11-25 18:04:17 INFO  [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan - Scanning for api listing references
+2019-11-25 18:04:17 INFO  [main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith - Generating unique operation named: insertToolsUsingPOST_1
+2019-11-25 18:04:17 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting ProtocolHandler ["http-nio-8080"]
+2019-11-25 18:04:17 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer start - Tomcat started on port(s): 8080 (http) with context path '/duduse'
+2019-11-25 18:04:17 INFO  [main] org.springframework.boot.StartupInfoLogger logStarted - Started DuduseApplication in 2.707 seconds (JVM running for 3.508)
+2019-11-25 18:04:24 INFO  [http-nio-8080-exec-2] org.apache.juli.logging.DirectJDKLog log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-25 18:04:24 INFO  [http-nio-8080-exec-2] org.springframework.web.servlet.FrameworkServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2019-11-25 18:04:24 INFO  [http-nio-8080-exec-2] org.springframework.web.servlet.FrameworkServlet initServletBean - Completed initialization in 6 ms
+2019-11-25 18:04:24 INFO  [http-nio-8080-exec-2] com.tu.duduse.controller.TestSpiderController addTestUrl - 新增测试网站:SpiderUrlBo(id=0, name=凌风云搜索, url=https://www.lingfengyun.com/search?wd={0}&so_token=c254e9fc3b8896905300bc2453f07cfd&so_source=1, xpath=//div[@class='tab'], type=soft, charset=utf-8, status=1)
+2019-11-25 18:05:19 INFO  [http-nio-8080-exec-4] com.tu.duduse.controller.TestSpiderController addTestUrl - 新增测试网站:SpiderUrlBo(id=0, name=凌风云搜索, url=https://www.lingfengyun.com/search?wd={0}&so_token=c254e9fc3b8896905300bc2453f07cfd&so_source=1, xpath=//div[@class='tab'], type=soft, charset=utf-8, status=1)
+2019-11-25 18:05:35 INFO  [http-nio-8080-exec-5] com.tu.duduse.controller.TestSpiderController addTestUrl - 新增测试网站:SpiderUrlBo(id=0, name=凌风云搜索, url=https://www.lingfengyun.com/search?wd={0}&so_token=c254e9fc3b8896905300bc2453f07cfd&so_source=1, xpath=//div[@class='tab'], type=soft, charset=utf-8, status=1)
+2019-11-25 18:07:01 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool$HouseKeeper run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m14s847ms593µs205ns).
+2019-11-25 18:08:39 INFO  [http-nio-8080-exec-10] com.tu.duduse.controller.SpiderUrlController insertUrl - 新增网站:SpiderUrlBo(id=0, name=凌风云搜索, url=https://www.lingfengyun.com/search?wd={0}&so_token=c254e9fc3b8896905300bc2453f07cfd&so_source=1, xpath=//div[@class='tab'], type=soft, charset=utf-8, status=1)
+2019-11-25 18:09:00 INFO  [Thread-8] org.springframework.scheduling.concurrent.ExecutorConfigurationSupport shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-25 18:09:00 INFO  [Thread-8] com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2019-11-25 18:09:00 INFO  [Thread-8] com.zaxxer.hikari.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2019-11-26 17:41:42 INFO  [main] org.springframework.boot.StartupInfoLogger logStarting - Starting DuduseApplication on DZ96NWW0AZJN874 with PID 26840 (E:\projects\duduse\target\classes started by Administrator in E:\projects\duduse)
+2019-11-26 17:41:42 INFO  [main] org.springframework.boot.SpringApplication logStartupProfileInfo - The following profiles are active: dev
+2019-11-26 17:41:44 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$360d5f41] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-26 17:41:44 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8080 (http)
+2019-11-26 17:41:44 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Initializing ProtocolHandler ["http-nio-8080"]
+2019-11-26 17:41:44 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting service [Tomcat]
+2019-11-26 17:41:44 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-11-26 17:41:44 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Initializing Spring embedded WebApplicationContext
+2019-11-26 17:41:44 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1765 ms
+2019-11-26 17:41:44 INFO  [main] com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2019-11-26 17:41:44 INFO  [main] com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2019-11-26 17:41:45 INFO  [main] org.jooq.tools.JooqLogger info - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.11.12
+                                      
+2019-11-26 17:41:45 INFO  [main] com.tu.duduse.common.utils.PackageScannerManager getFullyQualifiedClassNameList - start scanning classes from com.tu.duduse.spider.all
+2019-11-26 17:41:45 INFO  [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping initHandlerMethods - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-26 17:41:45 INFO  [main] org.springframework.scheduling.concurrent.ExecutorConfigurationSupport initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-26 17:41:45 INFO  [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping <init> - Adding welcome page: class path resource [static/index.html]
+2019-11-26 17:41:46 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start - Context refreshed
+2019-11-26 17:41:46 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start - Found 1 custom documentation plugin(s)
+2019-11-26 17:41:46 INFO  [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan - Scanning for api listing references
+2019-11-26 17:41:46 INFO  [main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith - Generating unique operation named: insertToolsUsingPOST_1
+2019-11-26 17:41:46 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting ProtocolHandler ["http-nio-8080"]
+2019-11-26 17:41:46 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer start - Tomcat started on port(s): 8080 (http) with context path '/duduse'
+2019-11-26 17:41:46 INFO  [main] org.springframework.boot.StartupInfoLogger logStarted - Started DuduseApplication in 3.96 seconds (JVM running for 4.909)
+2019-11-26 17:41:49 INFO  [http-nio-8080-exec-1] org.apache.juli.logging.DirectJDKLog log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-26 17:41:49 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2019-11-26 17:41:49 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet initServletBean - Completed initialization in 5 ms
+2019-11-26 17:47:22 INFO  [main] org.springframework.boot.StartupInfoLogger logStarting - Starting DuduseApplication on DZ96NWW0AZJN874 with PID 27036 (E:\projects\duduse\target\classes started by Administrator in E:\projects\duduse)
+2019-11-26 17:47:22 INFO  [main] org.springframework.boot.SpringApplication logStartupProfileInfo - The following profiles are active: dev
+2019-11-26 17:47:23 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$243ad9a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-26 17:47:23 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8080 (http)
+2019-11-26 17:47:23 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Initializing ProtocolHandler ["http-nio-8080"]
+2019-11-26 17:47:23 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting service [Tomcat]
+2019-11-26 17:47:23 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-11-26 17:47:23 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Initializing Spring embedded WebApplicationContext
+2019-11-26 17:47:23 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 949 ms
+2019-11-26 17:47:23 INFO  [main] com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2019-11-26 17:47:23 INFO  [main] com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2019-11-26 17:47:23 INFO  [main] org.jooq.tools.JooqLogger info - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.11.12
+                                      
+2019-11-26 17:47:23 INFO  [main] com.tu.duduse.common.utils.PackageScannerManager getFullyQualifiedClassNameList - start scanning classes from com.tu.duduse.spider.all
+2019-11-26 17:47:24 INFO  [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping initHandlerMethods - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-26 17:47:24 INFO  [main] org.springframework.scheduling.concurrent.ExecutorConfigurationSupport initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-26 17:47:24 INFO  [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping <init> - Adding welcome page: class path resource [static/index.html]
+2019-11-26 17:47:24 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start - Context refreshed
+2019-11-26 17:47:24 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start - Found 1 custom documentation plugin(s)
+2019-11-26 17:47:24 INFO  [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan - Scanning for api listing references
+2019-11-26 17:47:24 INFO  [main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith - Generating unique operation named: insertToolsUsingPOST_1
+2019-11-26 17:47:24 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting ProtocolHandler ["http-nio-8080"]
+2019-11-26 17:47:24 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer start - Tomcat started on port(s): 8080 (http) with context path '/duduse'
+2019-11-26 17:47:24 INFO  [main] org.springframework.boot.StartupInfoLogger logStarted - Started DuduseApplication in 2.431 seconds (JVM running for 3.112)
+2019-11-26 17:47:32 INFO  [http-nio-8080-exec-1] org.apache.juli.logging.DirectJDKLog log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-26 17:47:32 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2019-11-26 17:47:32 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet initServletBean - Completed initialization in 4 ms
+2019-11-26 17:51:02 INFO  [main] org.springframework.boot.StartupInfoLogger logStarting - Starting DuduseApplication on DZ96NWW0AZJN874 with PID 27040 (E:\projects\duduse\target\classes started by Administrator in E:\projects\duduse)
+2019-11-26 17:51:02 INFO  [main] org.springframework.boot.SpringApplication logStartupProfileInfo - The following profiles are active: dev
+2019-11-26 17:51:03 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$39274d81] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-26 17:51:03 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8080 (http)
+2019-11-26 17:51:03 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Initializing ProtocolHandler ["http-nio-8080"]
+2019-11-26 17:51:03 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting service [Tomcat]
+2019-11-26 17:51:03 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-11-26 17:51:03 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Initializing Spring embedded WebApplicationContext
+2019-11-26 17:51:03 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 935 ms
+2019-11-26 17:51:03 INFO  [main] com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2019-11-26 17:51:03 INFO  [main] com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2019-11-26 17:51:04 INFO  [main] org.jooq.tools.JooqLogger info - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.11.12
+                                      
+2019-11-26 17:51:04 INFO  [main] com.tu.duduse.common.utils.PackageScannerManager getFullyQualifiedClassNameList - start scanning classes from com.tu.duduse.spider.all
+2019-11-26 17:51:04 INFO  [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping initHandlerMethods - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-26 17:51:04 INFO  [main] org.springframework.scheduling.concurrent.ExecutorConfigurationSupport initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-26 17:51:04 INFO  [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping <init> - Adding welcome page: class path resource [static/index.html]
+2019-11-26 17:51:04 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start - Context refreshed
+2019-11-26 17:51:04 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start - Found 1 custom documentation plugin(s)
+2019-11-26 17:51:04 INFO  [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan - Scanning for api listing references
+2019-11-26 17:51:04 INFO  [main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith - Generating unique operation named: insertToolsUsingPOST_1
+2019-11-26 17:51:04 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting ProtocolHandler ["http-nio-8080"]
+2019-11-26 17:51:04 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer start - Tomcat started on port(s): 8080 (http) with context path '/duduse'
+2019-11-26 17:51:04 INFO  [main] org.springframework.boot.StartupInfoLogger logStarted - Started DuduseApplication in 2.441 seconds (JVM running for 3.108)
+2019-11-26 17:52:20 INFO  [http-nio-8080-exec-1] org.apache.juli.logging.DirectJDKLog log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-26 17:52:20 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2019-11-26 17:52:20 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet initServletBean - Completed initialization in 5 ms
+2019-11-26 18:03:21 INFO  [main] org.springframework.boot.StartupInfoLogger logStarting - Starting DuduseApplication on DZ96NWW0AZJN874 with PID 22708 (E:\projects\duduse\target\classes started by Administrator in E:\projects\duduse)
+2019-11-26 18:03:21 INFO  [main] org.springframework.boot.SpringApplication logStartupProfileInfo - The following profiles are active: dev
+2019-11-26 18:03:22 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$31e0b64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-26 18:03:22 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer initialize - Tomcat initialized with port(s): 8080 (http)
+2019-11-26 18:03:22 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Initializing ProtocolHandler ["http-nio-8080"]
+2019-11-26 18:03:22 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting service [Tomcat]
+2019-11-26 18:03:22 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-11-26 18:03:22 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Initializing Spring embedded WebApplicationContext
+2019-11-26 18:03:22 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 921 ms
+2019-11-26 18:03:22 INFO  [main] com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Starting...
+2019-11-26 18:03:22 INFO  [main] com.zaxxer.hikari.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2019-11-26 18:03:22 INFO  [main] org.jooq.tools.JooqLogger info - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.11.12
+                                      
+2019-11-26 18:03:22 INFO  [main] com.tu.duduse.common.utils.PackageScannerManager getFullyQualifiedClassNameList - start scanning classes from com.tu.duduse.spider.all
+2019-11-26 18:03:23 INFO  [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping initHandlerMethods - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-26 18:03:23 INFO  [main] org.springframework.scheduling.concurrent.ExecutorConfigurationSupport initialize - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-26 18:03:23 INFO  [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping <init> - Adding welcome page: class path resource [static/index.html]
+2019-11-26 18:03:23 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start - Context refreshed
+2019-11-26 18:03:23 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper start - Found 1 custom documentation plugin(s)
+2019-11-26 18:03:23 INFO  [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner scan - Scanning for api listing references
+2019-11-26 18:03:23 INFO  [main] springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator startingWith - Generating unique operation named: insertToolsUsingPOST_1
+2019-11-26 18:03:23 INFO  [main] org.apache.juli.logging.DirectJDKLog log - Starting ProtocolHandler ["http-nio-8080"]
+2019-11-26 18:03:23 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer start - Tomcat started on port(s): 8080 (http) with context path '/duduse'
+2019-11-26 18:03:23 INFO  [main] org.springframework.boot.StartupInfoLogger logStarted - Started DuduseApplication in 2.431 seconds (JVM running for 3.147)
+2019-11-26 18:04:12 INFO  [http-nio-8080-exec-1] org.apache.juli.logging.DirectJDKLog log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-26 18:04:12 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2019-11-26 18:04:12 INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet initServletBean - Completed initialization in 5 ms
