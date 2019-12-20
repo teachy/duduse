@@ -11,7 +11,7 @@
     <groupId>com.tu.duduse</groupId>
     <artifactId>duduse</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     <name>duduse</name>
     <description>Demo project for Spring Boot</description>
 

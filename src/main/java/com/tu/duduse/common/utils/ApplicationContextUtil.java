@@ -4,9 +4,12 @@ package com.tu.duduse.common.utils;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-@Component
+@Configuration
+@Order(1)
 public class ApplicationContextUtil implements ApplicationContextAware {
     private static ApplicationContext applicationContext;
 

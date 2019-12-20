@@ -71,7 +71,7 @@
                 $("[name='add']").remove();
             }
             $.ajax({
-                url: "http://127.0.0.1:8080/duduse/search/querySourcesByWebs?type=" + $("#select_value").val() + "&query=" + $('#searchPlaceholder').val(),
+                url: "search/querySourcesByWebs?type=" + $("#select_value").val() + "&query=" + $('#searchPlaceholder').val(),
                 type: "get",
                 dataType: "json",
                 success: function (data) {

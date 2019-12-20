@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<configuration status="info">
+<configuration status="error">
     <properties>
         <property name="pattern">%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %class{36} %M - %msg%xEx%n</property>
         <property name="fileSize">10M</property>
@@ -10,6 +10,10 @@
     </properties>
 
     <appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${pattern}"/>
+        </Console>
+
         <RollingFile name="all" fileName="${logPath}/all.log"
                      filePattern="logs/$${date:yyyy-MM}/all-%d{MM-dd-yyyy}-%i.log.zip">
             <PatternLayout pattern="${pattern}"/>
@@ -24,6 +28,7 @@
             <AppenderRef ref="all"/>
         </Logger>
         <Root level="${outputLogLevel}">
+            <AppenderRef ref="console"/>
             <AppenderRef ref="all"/>
         </Root>
     </loggers>

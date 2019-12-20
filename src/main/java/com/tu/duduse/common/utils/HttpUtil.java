@@ -79,7 +79,7 @@ public class HttpUtil {
             .setRedirectsEnabled(true)
             .setSocketTimeout(3000)
             .setConnectTimeout(3000)
-            .setConnectionRequestTimeout(5000)
+            .setConnectionRequestTimeout(3000)
             .build();
     private static PoolingHttpClientConnectionManager cm;
 

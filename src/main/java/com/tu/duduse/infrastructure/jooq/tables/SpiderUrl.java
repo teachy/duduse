@@ -41,7 +41,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class SpiderUrl extends TableImpl<SpiderUrlRecord> {
 
-    private static final long serialVersionUID = 2140037625;
+    private static final long serialVersionUID = 630363497;
 
     /**
      * The reference instance of <code>spider_url</code>
@@ -90,6 +90,11 @@ public class SpiderUrl extends TableImpl<SpiderUrlRecord> {
      * The column <code>spider_url.status</code>. 是否可用（1为可用）
      */
     public final TableField<SpiderUrlRecord, String> STATUS = createField("status", org.jooq.impl.SQLDataType.VARCHAR(4).nullable(false), this, "是否可用（1为可用）");
+
+    /**
+     * The column <code>spider_url.error_num</code>. 错误次数
+     */
+    public final TableField<SpiderUrlRecord, Integer> ERROR_NUM = createField("error_num", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "错误次数");
 
     /**
      * Create a <code>spider_url</code> table reference

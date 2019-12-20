@@ -21,4 +21,5 @@ public class SpiderUrlBo {
     private String charset = "utf-8";
     @ApiModelProperty(hidden = true)
     private String status = "1";
+    private Integer errorNum = 0;
 }

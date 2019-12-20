@@ -74,6 +74,8 @@ public class BaseSpider {
                 return new WebsDto(name, s1, httpQo.getUrl());
             }
         } catch (IOException e) {
+            e.printStackTrace();
+            ApplicationContextUtil.getBean(SpiderUrlDao.class).updateErrorSpiderByName(name);
             log.error("下载错误--webName：{}", name);
         }
         return new WebsDto();

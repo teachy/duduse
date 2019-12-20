@@ -25,13 +25,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/testUrl")
 @Slf4j
 public class TestSpiderController {
-    final SpiderUrlService spiderUrlService;
     final SpiderUrlController spiderUrlController;
     final SpiderService spiderService;
 
     @Autowired
-    TestSpiderController(SpiderUrlService spiderUrlService, SpiderUrlController spiderUrlController, SpiderService spiderService) {
-        this.spiderUrlService = spiderUrlService;
+    SpiderUrlService spiderUrlService;
+    @Autowired
+    TestSpiderController( SpiderUrlController spiderUrlController, SpiderService spiderService) {
         this.spiderUrlController = spiderUrlController;
         this.spiderService = spiderService;
     }
