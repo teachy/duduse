@@ -1,98 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>嘟嘟</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-<div class="searchbox">
-    <div class="mod_select">
-        <div class="select_box">
-            <span class="select_txt">全部</span>
-            <span class="select-icon"></span>
-            <ul class="option">
-                <li value="all">全部</li>
-                <li value="soft">软件</li>
-                <li value="game">游戏</li>
-                <li value="movie">影视</li>
-                <li value="story">小说</li>
-                <li value="code">编码</li>
-                <li value="tools">在线工具</li>
-                <li value="local">本地资源</li>
-            </ul>
-        </div>
-    </div>
-    <input type="hidden" name="" value="all" id="select_value">
-    <input type="text" name="" id="searchPlaceholder" class="import" placeholder="请输入软件名称">
-    <input type="submit" value="搜   索" class="btn-search">
-</div>
-<div class="search_table">
-    <table id="tab" class="table">
-        <tr>
-            <th class="table_th">名称</th>
-            <th class="table_th">大小</th>
-            <th class="table_th">密码</th>
-            <th class="table_th">连接</th>
-        </tr>
-    </table>
-</div>
-<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
-
-<script>
-    var $str="";
-    $(function () {
-        $(".select_box").click(function (event) {
-            event.stopPropagation();
-            $(this).find(".option").toggle();
-            $(this).parent().siblings().find(".option").hide();
-        });
-        $(document).click(function (event) {
-            var eo = $(event.target);
-            if ($(".select_box").is(":visible") && eo.attr("class") != "option" && !eo.parent(".option").length)
-                $('.option').hide();
-        });
-        $(".option li").click(function () {
-            var check_value = $(this).attr("value");
-            $(this).parent().siblings(".select_txt").text($(this).text());
-            $("#select_value").val(check_value);
-            var inputText = "请输入" + $(this).text() + "名称"
-            $('#searchPlaceholder').prop('placeholder', inputText);
-        });
-
-        $(".btn-search").click(function () {
-            if($str.length>0){
-                $str="";
-                $("[name='add']").remove();
-            }
-            $.ajax({
-                url: "search/querySourcesByWebs?type=" + $("#select_value").val() + "&query=" + $('#searchPlaceholder').val(),
-                type: "get",
-                dataType: "json",
-                success: function (data) {
-                    data = data.data;
-                    if (data.length > 0) {
-                        for (var i = 0; i < data.length; i++) {
-                            $str = "<tr name='add'><td>" + data[i].webName + "</td><td>" + data[i].size + "</td><td>" + data[i].pass + "</td><td><a target=\"_blank\" href='" + data[i].url + "'>下载地址</a></td></tr>";
-                            $("#tab").append($str);
-                        }
-                    } else {
-                        $str = "未找到数据";
-                        $("#tab").append($str);
-                    }
-                },
-                error: function (msg) {
-                    alert("ajax连接异常：" + msg.data);
-                }
-            });
-        });
-    })
-</script>
-</body>
-
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico">
+    <!--<link rel="stylesheet" href="./src//styles/index.css">-->
+    <title>duduse</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but duduse doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  <script type="text/javascript" src="bundle.js"></script></body>
 </html>

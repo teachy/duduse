@@ -5,11 +5,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.Consts;
+import org.apache.http.HttpHeaders;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
@@ -24,6 +26,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HttpContext;
+import org.apache.http.util.EntityUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -47,6 +50,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author gang.tu
@@ -56,7 +60,7 @@ import java.util.Map;
  */
 @Slf4j
 public class HttpUtil {
-    private static final int KEEP_ALIVE = 2000;
+    private static final int KEEP_ALIVE = 1000;
     private static Map<String, HttpClient> httpClients = new HashMap<>();
     private static ConnectionKeepAliveStrategy keepAliveStrat = new DefaultConnectionKeepAliveStrategy() {
         @Override
@@ -76,7 +80,7 @@ public class HttpUtil {
     }
 
     private static RequestConfig requestConfig = RequestConfig.custom()
-            .setRedirectsEnabled(true)
+            .setRedirectsEnabled(false)
             .setSocketTimeout(3000)
             .setConnectTimeout(3000)
             .setConnectionRequestTimeout(3000)
@@ -91,8 +95,8 @@ public class HttpUtil {
                     .register("https", new SSLConnectionSocketFactory(sslcontext))
                     .build();
             cm = new PoolingHttpClientConnectionManager(reg);
-            cm.setDefaultMaxPerRoute(32);
-            cm.setMaxTotal(200);
+            cm.setDefaultMaxPerRoute(64);
+            cm.setMaxTotal(300);
         } catch (Exception e) {
             log.error("初始化httpclinet错误：", e);
         }
@@ -111,10 +115,19 @@ public class HttpUtil {
                 requestBuilder.addHeader(headerEntry.getKey(), headerEntry.getValue());
             }
         }
+        requestBuilder.addHeader(HttpHeaders.CONNECTION, "close");
         requestBuilder.setConfig(requestConfig);
         requestBuilder.build();
-        HttpResponse response = getHttpClient(httpQo).execute(requestBuilder.build());
-        return handleResponse(httpQo, response);
+        HttpClient httpClient = getHttpClient(httpQo);
+        HttpUriRequest httpUriRequest = requestBuilder.build();
+        try {
+            HttpResponse response = httpClient.execute(httpUriRequest);
+            return handleResponse(httpQo, response);
+        } finally {
+            httpUriRequest.abort();
+            httpClient.getConnectionManager().closeExpiredConnections();
+            httpClient.getConnectionManager().closeIdleConnections(0L, TimeUnit.SECONDS);
+        }
     }
 
     private static CloseableHttpClient createHttpClient(boolean keepAlive) {
@@ -129,7 +142,7 @@ public class HttpUtil {
         String name = httpQo.getWebName();
         boolean keepAlive = httpQo.isKeepAlive();
         if (name == null) {
-            return createHttpClient(keepAlive);
+            return createHttpClient(false);
         }
         HttpClient httpClient;
         httpClient = httpClients.get(name);
