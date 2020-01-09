@@ -5,6 +5,7 @@ package com.tu.duduse.infrastructure.jooq;
 
 
 import com.tu.duduse.infrastructure.jooq.tables.IpList;
+import com.tu.duduse.infrastructure.jooq.tables.SourceType;
 import com.tu.duduse.infrastructure.jooq.tables.Sources;
 import com.tu.duduse.infrastructure.jooq.tables.SpiderBase;
 import com.tu.duduse.infrastructure.jooq.tables.SpiderQueue;
@@ -37,6 +38,11 @@ public class Tables {
      * The table <code>sources</code>.
      */
     public static final Sources SOURCES = com.tu.duduse.infrastructure.jooq.tables.Sources.SOURCES;
+
+    /**
+     * The table <code>source_type</code>.
+     */
+    public static final SourceType SOURCE_TYPE = com.tu.duduse.infrastructure.jooq.tables.SourceType.SOURCE_TYPE;
 
     /**
      * 爬虫基本信息

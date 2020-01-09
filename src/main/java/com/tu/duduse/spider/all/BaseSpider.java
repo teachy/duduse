@@ -1,10 +1,12 @@
 package com.tu.duduse.spider.all;
 
 import com.tu.duduse.common.model.bo.SpiderUrlBo;
+import com.tu.duduse.common.model.dto.SourceTypeDto;
 import com.tu.duduse.common.model.dto.WebsDto;
 import com.tu.duduse.common.model.qo.HttpQo;
 import com.tu.duduse.common.utils.ApplicationContextUtil;
 import com.tu.duduse.common.utils.HttpUtil;
+import com.tu.duduse.infrastructure.persistence.SourceTypeDao;
 import com.tu.duduse.infrastructure.persistence.SpiderUrlDao;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -31,12 +33,14 @@ import java.util.stream.Collectors;
 @Slf4j
 public class BaseSpider {
     public static Map<String, List<Function<String, WebsDto>>> allWorks = new HashMap<>();
+    public static List<SourceTypeDto> allType = new ArrayList<>();
     protected static final String CHARSET_UTF_8 = "utf-8";
     protected static final String CHARSET_GBK = "gb2312";
     protected static final String USED_SPIDER = "1";
     List<Function<String, WebsDto>> works = new ArrayList<>();
     protected String type;
     SpiderUrlDao spiderUrlDao = ApplicationContextUtil.getBean(SpiderUrlDao.class);
+    SourceTypeDao sourceTypeDao = ApplicationContextUtil.getBean(SourceTypeDao.class);
 
     /**
      * @description 加载数据库里的爬虫
@@ -45,6 +49,7 @@ public class BaseSpider {
      */
     public BaseSpider() {
         if (allWorks.isEmpty()) {
+            allType = sourceTypeDao.getAllType();
             List<SpiderUrlBo> allSpider = spiderUrlDao.getAllSpider();
             allSpider = allSpider.stream().filter(spider -> spider.getStatus().equals(USED_SPIDER)).collect(Collectors.toList());
             allSpider.stream().forEach(e -> {
@@ -54,7 +59,7 @@ public class BaseSpider {
                     list = new ArrayList<>();
                     allWorks.put(type, list);
                 }
-                list.add(getStringWebsDtoFunction(e.getXpath(), e.getName(), e.getUrl(), e.getCharset()));
+                list.add(getStringWebsDtoFunction(e));
             });
         }
     }
@@ -64,24 +69,24 @@ public class BaseSpider {
         return down.download(url);
     }
 
-    public static WebsDto getWebsDto(String xpath, String name, HttpQo httpQo) {
+    public static WebsDto getWebsDto(HttpQo httpQo) {
         try {
             Page page = HttpUtil.getPage(httpQo);
-            List<Selectable> res = page.getHtml().xpath(xpath).nodes();
+            List<Selectable> res = page.getHtml().xpath(httpQo.getXpath()).nodes();
             if (res != null && !res.isEmpty()) {
                 int temp = res.size();
                 String s1 = temp > 9 ? ("10+") : (temp + "");
-                return new WebsDto(name, s1, httpQo.getUrl());
+                return new WebsDto(httpQo.getName(), s1, httpQo.getUrl());
             }
         } catch (IOException e) {
             e.printStackTrace();
-            ApplicationContextUtil.getBean(SpiderUrlDao.class).updateErrorSpiderByName(name);
-            log.error("下载错误--webName：{}", name);
+            ApplicationContextUtil.getBean(SpiderUrlDao.class).updateErrorSpiderByName(httpQo.getName());
+            log.error("下载错误--webName：{}", httpQo.getName());
         }
         return new WebsDto();
     }
 
-    public static Function<String, WebsDto> getStringWebsDtoFunction(String path, String name, String url, String charset) {
-        return (String query) -> getWebsDto(path, name, new HttpQo(url, query, charset));
+    public static Function<String, WebsDto> getStringWebsDtoFunction(SpiderUrlBo spiderUrlBo) {
+        return (String query) -> getWebsDto(new HttpQo(query, spiderUrlBo));
     }
 }

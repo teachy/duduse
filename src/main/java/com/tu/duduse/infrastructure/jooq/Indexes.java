@@ -5,6 +5,7 @@ package com.tu.duduse.infrastructure.jooq;
 
 
 import com.tu.duduse.infrastructure.jooq.tables.IpList;
+import com.tu.duduse.infrastructure.jooq.tables.SourceType;
 import com.tu.duduse.infrastructure.jooq.tables.Sources;
 import com.tu.duduse.infrastructure.jooq.tables.SpiderBase;
 import com.tu.duduse.infrastructure.jooq.tables.SpiderQueue;
@@ -40,6 +41,7 @@ public class Indexes {
     public static final Index SOURCES_NGRAM_IDX = Indexes0.SOURCES_NGRAM_IDX;
     public static final Index SOURCES_PRIMARY = Indexes0.SOURCES_PRIMARY;
     public static final Index SOURCES_URL = Indexes0.SOURCES_URL;
+    public static final Index SOURCE_TYPE_PRIMARY = Indexes0.SOURCE_TYPE_PRIMARY;
     public static final Index SPIDER_BASE_PRIMARY = Indexes0.SPIDER_BASE_PRIMARY;
     public static final Index SPIDER_QUEUE_PRIMARY = Indexes0.SPIDER_QUEUE_PRIMARY;
     public static final Index SPIDER_UNIQUE_PRIMARY = Indexes0.SPIDER_UNIQUE_PRIMARY;
@@ -58,6 +60,7 @@ public class Indexes {
         public static Index SOURCES_NGRAM_IDX = Internal.createIndex("ngram_idx", Sources.SOURCES, new OrderField[] { Sources.SOURCES.NAME }, false);
         public static Index SOURCES_PRIMARY = Internal.createIndex("PRIMARY", Sources.SOURCES, new OrderField[] { Sources.SOURCES.ID }, true);
         public static Index SOURCES_URL = Internal.createIndex("url", Sources.SOURCES, new OrderField[] { Sources.SOURCES.URL }, true);
+        public static Index SOURCE_TYPE_PRIMARY = Internal.createIndex("PRIMARY", SourceType.SOURCE_TYPE, new OrderField[] { SourceType.SOURCE_TYPE.ID }, true);
         public static Index SPIDER_BASE_PRIMARY = Internal.createIndex("PRIMARY", SpiderBase.SPIDER_BASE, new OrderField[] { SpiderBase.SPIDER_BASE.ID }, true);
         public static Index SPIDER_QUEUE_PRIMARY = Internal.createIndex("PRIMARY", SpiderQueue.SPIDER_QUEUE, new OrderField[] { SpiderQueue.SPIDER_QUEUE.ID }, true);
         public static Index SPIDER_UNIQUE_PRIMARY = Internal.createIndex("PRIMARY", SpiderUnique.SPIDER_UNIQUE, new OrderField[] { SpiderUnique.SPIDER_UNIQUE.ID }, true);

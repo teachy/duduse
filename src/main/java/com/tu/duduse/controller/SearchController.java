@@ -2,6 +2,7 @@ package com.tu.duduse.controller;
 
 import com.tu.duduse.common.model.ResultData;
 import com.tu.duduse.service.SpiderService;
+import com.tu.duduse.spider.all.BaseSpider;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +38,12 @@ public class SearchController {
             return new ResultData("未找到数据");
         }
         return new ResultData<>(spiderService.queryBySpider(type, query, request));
+    }
+
+    @ApiOperation(value = "查询全部类型", notes = "查询列表")
+    @GetMapping("/queryAllType")
+    public ResultData queryAllType() {
+        return new ResultData<>(BaseSpider.allType);
     }
 
     private static final int MAX_LENGTH = 60;

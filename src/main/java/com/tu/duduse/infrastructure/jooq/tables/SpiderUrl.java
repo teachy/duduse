@@ -41,7 +41,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class SpiderUrl extends TableImpl<SpiderUrlRecord> {
 
-    private static final long serialVersionUID = 630363497;
+    private static final long serialVersionUID = 429791267;
 
     /**
      * The reference instance of <code>spider_url</code>
@@ -95,6 +95,11 @@ public class SpiderUrl extends TableImpl<SpiderUrlRecord> {
      * The column <code>spider_url.error_num</code>. 错误次数
      */
     public final TableField<SpiderUrlRecord, Integer> ERROR_NUM = createField("error_num", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "错误次数");
+
+    /**
+     * The column <code>spider_url.redirect</code>. 是否允许自动重定向（0 不自动重定向）
+     */
+    public final TableField<SpiderUrlRecord, String> REDIRECT = createField("redirect", org.jooq.impl.SQLDataType.VARCHAR(4).nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.VARCHAR)), this, "是否允许自动重定向（0 不自动重定向）");
 
     /**
      * Create a <code>spider_url</code> table reference

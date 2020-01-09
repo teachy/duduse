@@ -5,6 +5,7 @@ package com.tu.duduse.infrastructure.jooq;
 
 
 import com.tu.duduse.infrastructure.jooq.tables.IpList;
+import com.tu.duduse.infrastructure.jooq.tables.SourceType;
 import com.tu.duduse.infrastructure.jooq.tables.Sources;
 import com.tu.duduse.infrastructure.jooq.tables.SpiderBase;
 import com.tu.duduse.infrastructure.jooq.tables.SpiderQueue;
@@ -12,6 +13,7 @@ import com.tu.duduse.infrastructure.jooq.tables.SpiderUnique;
 import com.tu.duduse.infrastructure.jooq.tables.SpiderUrl;
 import com.tu.duduse.infrastructure.jooq.tables.Tools;
 import com.tu.duduse.infrastructure.jooq.tables.records.IpListRecord;
+import com.tu.duduse.infrastructure.jooq.tables.records.SourceTypeRecord;
 import com.tu.duduse.infrastructure.jooq.tables.records.SourcesRecord;
 import com.tu.duduse.infrastructure.jooq.tables.records.SpiderBaseRecord;
 import com.tu.duduse.infrastructure.jooq.tables.records.SpiderQueueRecord;
@@ -46,6 +48,7 @@ public class Keys {
 
     public static final Identity<IpListRecord, Integer> IDENTITY_IP_LIST = Identities0.IDENTITY_IP_LIST;
     public static final Identity<SourcesRecord, Integer> IDENTITY_SOURCES = Identities0.IDENTITY_SOURCES;
+    public static final Identity<SourceTypeRecord, Integer> IDENTITY_SOURCE_TYPE = Identities0.IDENTITY_SOURCE_TYPE;
     public static final Identity<SpiderUrlRecord, Integer> IDENTITY_SPIDER_URL = Identities0.IDENTITY_SPIDER_URL;
     public static final Identity<ToolsRecord, Integer> IDENTITY_TOOLS = Identities0.IDENTITY_TOOLS;
 
@@ -56,6 +59,7 @@ public class Keys {
     public static final UniqueKey<IpListRecord> KEY_IP_LIST_PRIMARY = UniqueKeys0.KEY_IP_LIST_PRIMARY;
     public static final UniqueKey<SourcesRecord> KEY_SOURCES_PRIMARY = UniqueKeys0.KEY_SOURCES_PRIMARY;
     public static final UniqueKey<SourcesRecord> KEY_SOURCES_URL = UniqueKeys0.KEY_SOURCES_URL;
+    public static final UniqueKey<SourceTypeRecord> KEY_SOURCE_TYPE_PRIMARY = UniqueKeys0.KEY_SOURCE_TYPE_PRIMARY;
     public static final UniqueKey<SpiderBaseRecord> KEY_SPIDER_BASE_PRIMARY = UniqueKeys0.KEY_SPIDER_BASE_PRIMARY;
     public static final UniqueKey<SpiderQueueRecord> KEY_SPIDER_QUEUE_PRIMARY = UniqueKeys0.KEY_SPIDER_QUEUE_PRIMARY;
     public static final UniqueKey<SpiderUniqueRecord> KEY_SPIDER_UNIQUE_PRIMARY = UniqueKeys0.KEY_SPIDER_UNIQUE_PRIMARY;
@@ -76,6 +80,7 @@ public class Keys {
     private static class Identities0 {
         public static Identity<IpListRecord, Integer> IDENTITY_IP_LIST = Internal.createIdentity(IpList.IP_LIST, IpList.IP_LIST.ID);
         public static Identity<SourcesRecord, Integer> IDENTITY_SOURCES = Internal.createIdentity(Sources.SOURCES, Sources.SOURCES.ID);
+        public static Identity<SourceTypeRecord, Integer> IDENTITY_SOURCE_TYPE = Internal.createIdentity(SourceType.SOURCE_TYPE, SourceType.SOURCE_TYPE.ID);
         public static Identity<SpiderUrlRecord, Integer> IDENTITY_SPIDER_URL = Internal.createIdentity(SpiderUrl.SPIDER_URL, SpiderUrl.SPIDER_URL.ID);
         public static Identity<ToolsRecord, Integer> IDENTITY_TOOLS = Internal.createIdentity(Tools.TOOLS, Tools.TOOLS.ID);
     }
@@ -84,6 +89,7 @@ public class Keys {
         public static final UniqueKey<IpListRecord> KEY_IP_LIST_PRIMARY = Internal.createUniqueKey(IpList.IP_LIST, "KEY_ip_list_PRIMARY", IpList.IP_LIST.ID);
         public static final UniqueKey<SourcesRecord> KEY_SOURCES_PRIMARY = Internal.createUniqueKey(Sources.SOURCES, "KEY_sources_PRIMARY", Sources.SOURCES.ID);
         public static final UniqueKey<SourcesRecord> KEY_SOURCES_URL = Internal.createUniqueKey(Sources.SOURCES, "KEY_sources_url", Sources.SOURCES.URL);
+        public static final UniqueKey<SourceTypeRecord> KEY_SOURCE_TYPE_PRIMARY = Internal.createUniqueKey(SourceType.SOURCE_TYPE, "KEY_source_type_PRIMARY", SourceType.SOURCE_TYPE.ID);
         public static final UniqueKey<SpiderBaseRecord> KEY_SPIDER_BASE_PRIMARY = Internal.createUniqueKey(SpiderBase.SPIDER_BASE, "KEY_spider_base_PRIMARY", SpiderBase.SPIDER_BASE.ID);
         public static final UniqueKey<SpiderQueueRecord> KEY_SPIDER_QUEUE_PRIMARY = Internal.createUniqueKey(SpiderQueue.SPIDER_QUEUE, "KEY_spider_queue_PRIMARY", SpiderQueue.SPIDER_QUEUE.ID);
         public static final UniqueKey<SpiderUniqueRecord> KEY_SPIDER_UNIQUE_PRIMARY = Internal.createUniqueKey(SpiderUnique.SPIDER_UNIQUE, "KEY_spider_unique_PRIMARY", SpiderUnique.SPIDER_UNIQUE.ID);

@@ -79,12 +79,10 @@ public class HttpUtil {
 
     }
 
-    private static RequestConfig requestConfig = RequestConfig.custom()
-            .setRedirectsEnabled(false)
+    private static RequestConfig.Builder builder = RequestConfig.custom()
             .setSocketTimeout(3000)
             .setConnectTimeout(3000)
-            .setConnectionRequestTimeout(3000)
-            .build();
+            .setConnectionRequestTimeout(3000);
     private static PoolingHttpClientConnectionManager cm;
 
     static {
@@ -116,7 +114,7 @@ public class HttpUtil {
             }
         }
         requestBuilder.addHeader(HttpHeaders.CONNECTION, "close");
-        requestBuilder.setConfig(requestConfig);
+        requestBuilder.setConfig(builder.setRedirectsEnabled(httpQo.isRedirect()).build());
         requestBuilder.build();
         HttpClient httpClient = getHttpClient(httpQo);
         HttpUriRequest httpUriRequest = requestBuilder.build();
@@ -139,7 +137,7 @@ public class HttpUtil {
     }
 
     private static HttpClient getHttpClient(HttpQo httpQo) {
-        String name = httpQo.getWebName();
+        String name = httpQo.getName();
         boolean keepAlive = httpQo.isKeepAlive();
         if (name == null) {
             return createHttpClient(false);

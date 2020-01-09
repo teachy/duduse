@@ -166,7 +166,7 @@ public class SpiderWorkers implements SpiderWorkService {
                 allTest.clear();
             }
             testSpiderUrlBo = spiderUrlBo;
-            allTest.add(BaseSpider.getStringWebsDtoFunction(spiderUrlBo.getXpath(), spiderUrlBo.getName(), spiderUrlBo.getUrl(), spiderUrlBo.getCharset()));
+            allTest.add(BaseSpider.getStringWebsDtoFunction(spiderUrlBo));
             return true;
         }
         return false;

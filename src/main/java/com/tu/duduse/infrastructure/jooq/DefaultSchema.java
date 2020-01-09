@@ -5,6 +5,7 @@ package com.tu.duduse.infrastructure.jooq;
 
 
 import com.tu.duduse.infrastructure.jooq.tables.IpList;
+import com.tu.duduse.infrastructure.jooq.tables.SourceType;
 import com.tu.duduse.infrastructure.jooq.tables.Sources;
 import com.tu.duduse.infrastructure.jooq.tables.SpiderBase;
 import com.tu.duduse.infrastructure.jooq.tables.SpiderQueue;
@@ -36,7 +37,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class DefaultSchema extends SchemaImpl {
 
-    private static final long serialVersionUID = -1611728185;
+    private static final long serialVersionUID = -1447088424;
 
     /**
      * The reference instance of <code></code>
@@ -52,6 +53,11 @@ public class DefaultSchema extends SchemaImpl {
      * The table <code>sources</code>.
      */
     public final Sources SOURCES = com.tu.duduse.infrastructure.jooq.tables.Sources.SOURCES;
+
+    /**
+     * The table <code>source_type</code>.
+     */
+    public final SourceType SOURCE_TYPE = com.tu.duduse.infrastructure.jooq.tables.SourceType.SOURCE_TYPE;
 
     /**
      * 爬虫基本信息
@@ -105,6 +111,7 @@ public class DefaultSchema extends SchemaImpl {
         return Arrays.<Table<?>>asList(
             IpList.IP_LIST,
             Sources.SOURCES,
+            SourceType.SOURCE_TYPE,
             SpiderBase.SPIDER_BASE,
             SpiderQueue.SPIDER_QUEUE,
             SpiderUnique.SPIDER_UNIQUE,
