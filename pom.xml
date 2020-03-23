@@ -165,9 +165,9 @@
                 <configuration>
                     <jdbc>
                         <driver>com.mysql.cj.jdbc.Driver</driver>
-                        <url>jdbc:mysql://127.0.0.1:3306/tis?characterEncoding=UTF-8&amp;serverTimezone=UTC</url>
+                        <url>jdbc:mysql://47.105.179.154:3306/tis?characterEncoding=UTF-8&amp;serverTimezone=UTC</url>
                         <user>root</user>
-                        <password>123456</password>
+                        <password>Tu1989..</password>
                     </jdbc>
                     <generator>
                         <database>

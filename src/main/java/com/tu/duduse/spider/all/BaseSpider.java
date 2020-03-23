@@ -33,7 +33,6 @@ import java.util.stream.Collectors;
 @Slf4j
 public class BaseSpider {
     public static Map<String, List<Function<String, WebsDto>>> allWorks = new HashMap<>();
-    public static List<SourceTypeDto> allType = new ArrayList<>();
     protected static final String CHARSET_UTF_8 = "utf-8";
     protected static final String CHARSET_GBK = "gb2312";
     protected static final String USED_SPIDER = "1";
@@ -49,7 +48,6 @@ public class BaseSpider {
      */
     public BaseSpider() {
         if (allWorks.isEmpty()) {
-            allType = sourceTypeDao.getAllType();
             List<SpiderUrlBo> allSpider = spiderUrlDao.getAllSpider();
             allSpider = allSpider.stream().filter(spider -> spider.getStatus().equals(USED_SPIDER)).collect(Collectors.toList());
             allSpider.stream().forEach(e -> {

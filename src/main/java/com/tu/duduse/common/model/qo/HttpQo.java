@@ -39,7 +39,7 @@ public class HttpQo {
             } else {
                 this.setRedirect(true);
             }
-            this.setUrl(MessageFormat.format(url, URLEncoder.encode(query, spiderUrlBo.getCharset())));
+            this.setUrl(MessageFormat.format(spiderUrlBo.getUrl(), URLEncoder.encode(query, spiderUrlBo.getCharset())));
             this.getHeaders().put("Host", URIUtils.extractHost(new URI(this.getUrl())).getHostName());
             this.getHeaders().put("User-Agent", USER_AGENT);
         } catch (Exception e) {

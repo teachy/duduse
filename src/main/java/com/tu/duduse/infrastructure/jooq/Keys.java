@@ -4,6 +4,8 @@
 package com.tu.duduse.infrastructure.jooq;
 
 
+import com.tu.duduse.infrastructure.jooq.tables.CoinList;
+import com.tu.duduse.infrastructure.jooq.tables.Hosts;
 import com.tu.duduse.infrastructure.jooq.tables.IpList;
 import com.tu.duduse.infrastructure.jooq.tables.SourceType;
 import com.tu.duduse.infrastructure.jooq.tables.Sources;
@@ -12,6 +14,8 @@ import com.tu.duduse.infrastructure.jooq.tables.SpiderQueue;
 import com.tu.duduse.infrastructure.jooq.tables.SpiderUnique;
 import com.tu.duduse.infrastructure.jooq.tables.SpiderUrl;
 import com.tu.duduse.infrastructure.jooq.tables.Tools;
+import com.tu.duduse.infrastructure.jooq.tables.records.CoinListRecord;
+import com.tu.duduse.infrastructure.jooq.tables.records.HostsRecord;
 import com.tu.duduse.infrastructure.jooq.tables.records.IpListRecord;
 import com.tu.duduse.infrastructure.jooq.tables.records.SourceTypeRecord;
 import com.tu.duduse.infrastructure.jooq.tables.records.SourcesRecord;
@@ -46,6 +50,7 @@ public class Keys {
     // IDENTITY definitions
     // -------------------------------------------------------------------------
 
+    public static final Identity<HostsRecord, Integer> IDENTITY_HOSTS = Identities0.IDENTITY_HOSTS;
     public static final Identity<IpListRecord, Integer> IDENTITY_IP_LIST = Identities0.IDENTITY_IP_LIST;
     public static final Identity<SourcesRecord, Integer> IDENTITY_SOURCES = Identities0.IDENTITY_SOURCES;
     public static final Identity<SourceTypeRecord, Integer> IDENTITY_SOURCE_TYPE = Identities0.IDENTITY_SOURCE_TYPE;
@@ -56,6 +61,9 @@ public class Keys {
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
+    public static final UniqueKey<CoinListRecord> KEY_COIN_LIST_PRIMARY = UniqueKeys0.KEY_COIN_LIST_PRIMARY;
+    public static final UniqueKey<HostsRecord> KEY_HOSTS_PRIMARY = UniqueKeys0.KEY_HOSTS_PRIMARY;
+    public static final UniqueKey<HostsRecord> KEY_HOSTS_IP = UniqueKeys0.KEY_HOSTS_IP;
     public static final UniqueKey<IpListRecord> KEY_IP_LIST_PRIMARY = UniqueKeys0.KEY_IP_LIST_PRIMARY;
     public static final UniqueKey<SourcesRecord> KEY_SOURCES_PRIMARY = UniqueKeys0.KEY_SOURCES_PRIMARY;
     public static final UniqueKey<SourcesRecord> KEY_SOURCES_URL = UniqueKeys0.KEY_SOURCES_URL;
@@ -78,6 +86,7 @@ public class Keys {
     // -------------------------------------------------------------------------
 
     private static class Identities0 {
+        public static Identity<HostsRecord, Integer> IDENTITY_HOSTS = Internal.createIdentity(Hosts.HOSTS, Hosts.HOSTS.ID);
         public static Identity<IpListRecord, Integer> IDENTITY_IP_LIST = Internal.createIdentity(IpList.IP_LIST, IpList.IP_LIST.ID);
         public static Identity<SourcesRecord, Integer> IDENTITY_SOURCES = Internal.createIdentity(Sources.SOURCES, Sources.SOURCES.ID);
         public static Identity<SourceTypeRecord, Integer> IDENTITY_SOURCE_TYPE = Internal.createIdentity(SourceType.SOURCE_TYPE, SourceType.SOURCE_TYPE.ID);
@@ -86,6 +95,9 @@ public class Keys {
     }
 
     private static class UniqueKeys0 {
+        public static final UniqueKey<CoinListRecord> KEY_COIN_LIST_PRIMARY = Internal.createUniqueKey(CoinList.COIN_LIST, "KEY_coin_list_PRIMARY", CoinList.COIN_LIST.ID);
+        public static final UniqueKey<HostsRecord> KEY_HOSTS_PRIMARY = Internal.createUniqueKey(Hosts.HOSTS, "KEY_hosts_PRIMARY", Hosts.HOSTS.ID);
+        public static final UniqueKey<HostsRecord> KEY_HOSTS_IP = Internal.createUniqueKey(Hosts.HOSTS, "KEY_hosts_ip", Hosts.HOSTS.IP);
         public static final UniqueKey<IpListRecord> KEY_IP_LIST_PRIMARY = Internal.createUniqueKey(IpList.IP_LIST, "KEY_ip_list_PRIMARY", IpList.IP_LIST.ID);
         public static final UniqueKey<SourcesRecord> KEY_SOURCES_PRIMARY = Internal.createUniqueKey(Sources.SOURCES, "KEY_sources_PRIMARY", Sources.SOURCES.ID);
         public static final UniqueKey<SourcesRecord> KEY_SOURCES_URL = Internal.createUniqueKey(Sources.SOURCES, "KEY_sources_url", Sources.SOURCES.URL);

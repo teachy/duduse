@@ -4,6 +4,8 @@
 package com.tu.duduse.infrastructure.jooq;
 
 
+import com.tu.duduse.infrastructure.jooq.tables.CoinList;
+import com.tu.duduse.infrastructure.jooq.tables.Hosts;
 import com.tu.duduse.infrastructure.jooq.tables.IpList;
 import com.tu.duduse.infrastructure.jooq.tables.SourceType;
 import com.tu.duduse.infrastructure.jooq.tables.Sources;
@@ -28,6 +30,16 @@ import javax.annotation.Generated;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Tables {
+
+    /**
+     * The table <code>coin_list</code>.
+     */
+    public static final CoinList COIN_LIST = com.tu.duduse.infrastructure.jooq.tables.CoinList.COIN_LIST;
+
+    /**
+     * The table <code>hosts</code>.
+     */
+    public static final Hosts HOSTS = com.tu.duduse.infrastructure.jooq.tables.Hosts.HOSTS;
 
     /**
      * The table <code>ip_list</code>.

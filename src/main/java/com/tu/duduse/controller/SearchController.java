@@ -2,7 +2,6 @@ package com.tu.duduse.controller;
 
 import com.tu.duduse.common.model.ResultData;
 import com.tu.duduse.service.SpiderService;
-import com.tu.duduse.spider.all.BaseSpider;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+
+import static com.tu.duduse.common.model.single.BaseData.getBaseData;
 
 /**
  * @author gang.tu
@@ -43,7 +44,13 @@ public class SearchController {
     @ApiOperation(value = "查询全部类型", notes = "查询列表")
     @GetMapping("/queryAllType")
     public ResultData queryAllType() {
-        return new ResultData<>(BaseSpider.allType);
+        return new ResultData<>(getBaseData().getAllType());
+    }
+
+    @ApiOperation(value = "查询交易列表", notes = "查询交易列表")
+    @GetMapping("/queryTradeList")
+    public ResultData queryTradeList() {
+        return new ResultData<>(getBaseData().getCoinList());
     }
 
     private static final int MAX_LENGTH = 60;
